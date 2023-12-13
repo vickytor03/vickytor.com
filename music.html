@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>VICKYTOR - music</title>
+</head>
+<body class="musicBody">
+    
+    <div class="loader" id="loader"></div>
+
+    <div class="content" id="content">    
+        <!--NAV-->
+        <nav class="animNav">
+            <ul class="navList">
+                <li class="navListItem"><a href="animation.html">Visual Arts & Animation</a></li>
+            </ul>
+            <div class="navListMenu">
+                <button class="menuIcon" onclick="toggleMenu()">
+                    <img src="assets/hamburgerMenuIcon.png" alt="hamburger menu icon">
+                </button>
+            </div>
+            <ul class="dropdownMenu">
+                <li class="navListItem"><a href="animation.html">Visual Arts & Animation</a></li>
+            </ul>
+        </nav>
+
+        <div class="wrapperNoNav">
+            <h2 class="comingSoon">coming soon...</h2>
+        </div>
+        
+        <div class="snippetContainer">
+            <audio controls>
+                <source src="assets/vd_musicSnippet.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>    
+
+
+    <script src="main.js"></script>
+</body>
+</html>

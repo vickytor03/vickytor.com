@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Victor D'Anzi - Animation</title>
+</head>
+
+<body class="animBody">
+    <div class="loader" id="loader"></div>
+
+    <div class="content" id="content">    
+        <!--NAV-->
+        <nav class="animNav">
+            <ul class="navList">
+                <li class="navListItem"><a href="#demoReels">Demo Reels</a></li>
+                <li class="navListItem"><a href="#recentWork">Recent Work</a></li>
+                <li class="navListItem"><a href="#about">About</a></li>
+                <li class="navListItem"><a href="#contact">Contact</a></li>
+                <li class="navListBar">|</li>
+                <!-- <li class="navListItem"><a href="">Gallery</a></li> -->
+                <li class="navListItem"><a href="music.html">Music</a></li>
+            </ul>
+            <div class="navListMenu">
+                <button class="menuIcon" onclick="toggleMenu()">
+                    <img src="assets/hamburgerMenuIcon.png" alt="hamburger menu icon">
+                </button>
+            </div>
+            <ul class="dropdownMenu">
+                <li class="navListItem"><a href="#demoReels">Demo Reels</a></li>
+                <li class="navListItem"><a href="#recentWork">Recent Work</a></li>
+                <li class="navListItem"><a href="#about">About</a></li>
+                <li class="navListItem"><a href="#contact">Contact</a></li>
+                <li class="navListItem"><a href="music.html">Music</a></li>
+            </ul>
+        </nav>
+
+        <div class="wrapperNoNav">
+            
+            <!--Title-->
+            <main id="topOfPage">
+                <img class="profilePicture" src="assets/profilePhoto.png" alt="picture of Victor DAnzi">
+                <h1 class="name">Victor D'Anzi</h1>
+                <h2 class="position">3D Animator</h2>
+            </main>
+
+
+            <!--Reel-->
+            <div id="demoReels">
+                <iframe class="reelVid" width="1000" src="https://player.vimeo.com/video/624383268?h=d9b9897918&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0"></iframe>
+                <iframe class="reelVid" width="1000" src="https://player.vimeo.com/video/893891432?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" frameborder="0"></iframe>
+            </div>
+
+            <img class="dividerLine" src="assets/dividerLine_v01.png" alt="dividerLine">
+
+            <!-- Recent Work -->
+            <div id="recentWork">
+                <div class="artifex">
+                    <div class="recentWorkSide">
+                        <img class="artifexLogoImage" src="assets/artifexLogo.png" alt="Artifex Logo"></li>
+                    </div>
+                    <div class="recentWorkSide">
+                        <h2 class="artifexExplanation">Short film presented at <a class="bold">View Conference 2023</a>.</h2>
+                    </div>
+                    <div class="recentWorkSide">
+                        <h3 class="artifexRoles">Screenplay/ Animation/ Pipeline TD/ <br>Storyboard & Previs/ Compositing</h3>
+                    </div>
+                    <div class="artifexVideoContainer">
+                        <video id="artifexVideoPlayer" controls>
+                            <source src="assets/vd_artifexShotBreakdown01_v01.mp4" type="video/mp4">
+                        </video>
+                        <div class="artifexVideoSelect">
+                            <img src="assets/vd_artifexShotBreakdown01_v01_still.png" alt="Still from Artifex: the main character is winding up a music box." onclick="changeVideo('assets/vd_artifexShotBreakdown01_v01.mp4')">
+                            <img src="assets/vd_artifexShotBreakdown02_v01_still.png" alt="Still from Artifex: the main character is looking at the creation of statues." onclick="changeVideo('assets/vd_artifexShotBreakdown02_v01.mp4')">
+                            <img src="assets/vd_artifexShotBreakdown03_v01_still.png" alt="Still from Artifex: the main character glitches as he touches the wall." onclick="changeVideo('assets/vd_artifexShotBreakdown03_v01.mp4')">
+                        </div>
+                    </div>
+                    <div class="linkTo">
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7120061543358046208?utm_source=share&utm_medium=member_desktop" target="_blank">View full short film.</a>
+                    </div>
+                    </div>
+                    <div class="gentExhibition">
+                        <div class="recentWorkLeft">
+                            <h1 class="gentTitle">Film Fest Gent</h1>
+                        </div>
+                        <div class="recentWorkLeft">
+                            <h1 class="gentInfo">50x AR Exhibition <a class="gentDetails">(made in 4 days)</a></h1>
+                        </div>
+                        <video class="gentVideo" src="assets/victor_danzi_anim.mp4" controls></video>
+                </div>
+                <img class="dividerLine" src="assets/dividerLine_v01.png" alt="dividerLine">
+
+            <!-- Personal Info -->
+            <div id="about" class="personalInfo">
+                <h1 class="personalTitle">About</h1>
+                <p class="about">My name is Victor and I am 20 years old. I am Italian-Belgian and I was raised in Rome.<br><br>Storytelling has always been my greatest passion: from filling out notebooks with drawings of original stories to my love for cinema and acting.<br><br>I entered the world of animation because I felt that being able to create anything from the ground up would be the most rewarding way to express my creativity. I studied CG Animation at IED Rome, and I am now enrolled in School of Visual Arts (SVA)'s MFA in Computer Arts.</p>
+                <div class="linkTo">
+                    <a href="assets/3DAnimator_DAnziVictor_cv_2023Mar_ENG.pdf" target="_blank" id="openPDF">Download CV</a>
+                </div>
+            </div>
+
+            <div id="contact" class="personalInfo">
+                <h1 class="personalTitle">Contact</h1>
+                <ul class="contactList">
+                    <li class="email">vickytor.animation@gmail.com</li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/victor-d-anzi-34718a263/" target="_blank">
+                            <img class="linkedInIcon" src="assets/linkedInLogo.png" alt="Linked In">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/vickytor.animation/" target="_blank">
+                            <img class="instagrmIcon" src="assets/instagramLogo.png" alt="Instagram">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>    
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
