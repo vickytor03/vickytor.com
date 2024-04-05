@@ -487,6 +487,11 @@
     font-size: 21px;
 }
 
+.toBeDeleted {
+    font-weight: lighter;
+    font-size: 16px;
+}
+
 .snippetContainer {
     position: fixed;
     top: 50%;
