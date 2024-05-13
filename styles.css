@@ -139,6 +139,7 @@
 
 /* Title and main */
 .wrapperNoNav{
+    width: 100%;
     max-width: 1500px;
     margin: 0 auto;
 }
@@ -410,6 +411,7 @@
 .personalTitle {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: lighter;
+    margin-left: 2rem;
     font-size: 48px;
 }
 
@@ -420,10 +422,13 @@
     width: 100%;
     max-width: 500px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin: 0 auto;
     margin-top: 3rem;
     margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .contactList {
@@ -435,7 +440,9 @@
     margin-top: 3rem;
 }
 
-.email {
+.email a {
+    text-decoration: none;
+    color: #272727;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
@@ -446,6 +453,10 @@
 
 .instagrmIcon {
     width: 40px;
+}
+
+hr {
+    opacity: 0;
 }
 
 @media screen and (max-width: 500px) {
@@ -467,16 +478,79 @@
         margin-bottom: 1rem;
     }
 
-    .email {
+    .email a {
         font-size: 5vw;
     }
 }
 
 
 /* MUSIC!!!! */
-.musicBody {
-    background-image: url(assets/vd_music_bg_v01.png);
-    background-size: auto;
+.musicHeaderBG {
+    background-image: url(assets/DICYM_03732_v02_websiteRatio01.png);
+    background-size: cover;
+}
+
+.vickytorTitle {
+    width: 40%;
+    min-width: 200px;
+    max-width: 1000px;
+    margin-top: 10vw;
+    margin-left: 4vw;
+}
+
+.mainMusicContainer {
+    background-image: linear-gradient(#2665c0, #233f7c);
+    padding: 8rem 0px;
+}
+
+.singleRelease {
+    background-color: #1c1d29;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 35%;
+    min-width: 260px;
+    margin: auto;
+    padding: 3rem 0;
+}
+
+.singleRelease h1 {
+    color: #ececec;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    text-align: center;
+    font-size: 28px;
+    max-width: 75vw;
+    padding: 1.5rem 2rem;
+}
+
+.singleRelease img {
+    margin: auto;
+    width: 60%;
+    min-width: 200px;
+    padding: 2rem 0px;
+}
+
+.streamingMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.streamingOption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #ececec;
+    border: #ececec solid 1px;
+    border-radius: 5rem;
+    padding: 0.5rem;
+    width: 250px;
 }
 
 .comingSoon {
@@ -518,4 +592,19 @@
   
 .content {
     display: none;
+}
+
+@media screen and (max-width: 850px) {
+    
+    .mainMusicContainer {
+        padding: 1rem 0px;
+    }
+
+    .singleRelease {
+        background-color: transparent;
+    }
+    
+    .singleRelease h1 {
+        font-size: 22px;
+    }
 }
