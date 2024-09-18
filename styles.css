@@ -441,6 +441,14 @@ nav {
   margin-bottom : 20px;
 }
 
+.card-title {
+  height: 50px;
+}
+
+.card-title-long {
+  font-size: 23px;
+}
+
 .card-text {
   height: 80px;
 }

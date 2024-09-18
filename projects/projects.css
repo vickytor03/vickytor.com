@@ -144,6 +144,10 @@ h1 {
     display: flex;
 }
 
+.major-image {
+    margin-top: 45px;
+}
+
 .demoreel-container {
     margin-top: 60px;
     margin-bottom: 15px;
@@ -163,6 +167,10 @@ h1 {
     background-color: white;
     text-decoration: none;
     transition: 0.3s;
+}
+
+.body-short {
+    min-height: 93vh;
 }
 
 /* if search engines don't support aspect-ratio */
