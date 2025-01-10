@@ -9,7 +9,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  background-color: #020711;
+  background-color: #000000;
   color: white;
   height: 100%;
   position: relative;
@@ -166,7 +166,7 @@ nav {
 
 /* Video Section */
 .header-video {
-  height: 100vh;
+  height: 97vh;
   width: 100%;
   position: relative;
   top: 0;
@@ -362,9 +362,9 @@ nav {
   top: 0;
   left: 0;
   overflow: hidden;
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 150px;
-  background-color: #081b43;
+  background-color: #020711;
 }
 
 .about-section .row { 
@@ -426,12 +426,13 @@ nav {
 }
 
 
+
 /* Gallery Section */
 
 
 .projectGallery {
   background-color: #020711;
-  padding: 60px 0;
+  padding: 100px 0;
 }
 .projectGallery h2 {
   margin-bottom: 45px;
@@ -457,7 +458,7 @@ nav {
 /* Footer Section */
 
 footer {
-  background-color: #020711;
+  background-color: #000000;
   color: white;
   padding: 20px 0;
   text-align: center;
