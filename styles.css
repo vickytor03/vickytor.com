@@ -200,10 +200,6 @@ nav {
   line-height: 4rem;
 }
 
-.header-video h1 p { 
-  padding-top: 5px;
-}
-
 .header-video iframe {
   display: block; 
   margin: 0;
