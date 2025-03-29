@@ -54,7 +54,7 @@ i {
   width: calc((100% / 12) * 3);
   position: fixed;
   /*right: 0;*/
-  /*z-index: 996;*/
+  /* z-index: 996; */
 }
 
 header {
@@ -184,26 +184,41 @@ nav {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2); /* CHANGE FILTER OF THE VIDEO */
-  z-index: 0; /* Put the filter on top of vidéo */
+  z-index: 0; /* Put the filter on top of the video */
 }
 
 .header-video h1 {
   position: absolute;
   font-family: "Poppins", sans-serif;
-  /*font-family: 'Abril Fatface', serif;*/
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 5rem;
   text-align: center;
-  z-index: 1; /* put the text on top of vidéo */
+  z-index: 1; /* Put the text on top of the video */
   text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
   line-height: 4rem;
 }
 
+.video-placeholder {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Keeps it under other elements */
+}
+
+.video-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Make sure the iframe replaces the placeholder correctly */
 .header-video iframe {
-  display: block; 
+  display: block;
   margin: 0;
   padding: 0;
   position: absolute;
@@ -213,11 +228,11 @@ nav {
   height: 100%;
   transform: scale(1.2);
   border: none;
-  z-index: -1; /* put the video under everything else */
-  object-fit: cover; /* video covered all the container */
+  z-index: -1; /* Keep the video in the background */
+  object-fit: cover; /* Ensure video covers the container */
 }
 
-.header-title .btn{
+.header-title .btn {
   margin-top: 30px;
 }
 
@@ -595,7 +610,7 @@ footer a:hover {
 @media (max-width:792px) {
 
   .header-video {
-    background-image: url('assets/title-screen-mobile-victor-danzi-3d-animation.jpg');
+    background-image: url('assets/ellis-reflection-victor-danzi-animated-short-film-01.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
