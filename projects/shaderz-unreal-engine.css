@@ -1,0 +1,101 @@
+.body-project {
+    background-color: #0e011d;
+    z-index: 2;
+    position: relative; /* Add this to ensure z-index works */
+}
+
+/*.ellisReflection_title {
+    font-family: "Pirata One", system-ui;
+    font-size: 82px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 8.2px;
+}
+
+ .btn {
+    color: #000000;
+    border-color: #000000;
+}
+
+.btn:before {
+    background-color: rgb(0, 0, 0);
+}
+  
+.btn:hover, .btn:focus, .btn:active {
+    color: rgb(255, 255, 255); 
+    border-color: rgb(0, 0, 0); 
+}
+  
+.btn:hover:before, .btn:focus:before, .btn:active:before {
+    transform: translateX(0); 
+}
+
+.row a.back {
+    color: rgb(0, 0, 0);
+}
+.row a.back:hover {
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+}
+
+.row a.back:after {
+    border-bottom: 3px solid rgb(0, 0, 0);
+    border-left: 3px solid rgb(0, 0, 0);
+}
+
+.row a.back:hover:after {
+    border-color: #ffffff;
+} */
+
+.header-image {
+    background-image: url('projectAssets/shaderz-victor-danzi-unreal-engine-3d-animation-010.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    padding-bottom: 80px;
+    position: relative; /* Add this to ensure z-index works */
+    z-index: 1; /* Make sure the header image is behind other elements */
+}
+
+.body-container {
+    padding-top: 0;
+    padding-bottom: 120px;
+}
+
+.role-title {
+    margin-top: 60px;
+}
+
+.row {
+    position: relative; /* Ensure z-index works */
+    z-index: 999;
+}
+
+footer {
+    position: relative; /* Ensure z-index works */
+    z-index: 999;
+    background-color: black;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.storyboard-page {
+   width: 30%;
+   margin: 5px 5px;
+}
+
+@media (max-width:792px) {
+    .storyboard-page {
+        width: 45%;
+    }
+}
+
+
+@media (min-height:1100px) {
+    .container-project {
+        min-height: 100vh;
+    }
+}
