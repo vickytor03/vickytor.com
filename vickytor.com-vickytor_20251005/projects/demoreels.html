@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <title>VICKYTOR - Demo Reel</title>
+     <meta name="description" content="Victor D'Anzi's CG Generalist and 3D Animator demo reel.">
+    <!--link rel="icon" type="image/x-icon" href="/assets/favicon.ico"> FOR YOUR LOGO -->
+   <!-- link to the CSS of Bootstrap -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <!-- link to jQuery -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <!-- link to JS of Bootstrap -->
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+   <script src="https://player.vimeo.com/api/player.js"></script>
+
+
+   <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="demoreels.css">
+</head>
+
+<body class="body-project">
+   
+    <div class="container-project">
+        <div class="row">
+            <div class="col-6">
+                <a class="back" href="../index.html" >Home</a>
+            </div>
+            <div class="col-6">
+                <p class="text-right">Victor D'Anzi</p>
+            </div>
+            <div class="col-12">
+                <h1>Demo Reel</h1>
+
+                <div class="video-group-container">
+                    <div class="iframe-container demoreel-container">
+                        <iframe id="youtube-player-large" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://player.vimeo.com/video/987734638?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" title="Victor D'ANZI demo reel" width="560"></iframe>
+                        <script src="https://player.vimeo.com/api/player.js"></script>
+                        <script>
+                            var iframe = document.getElementById('youtube-player-large');
+                            var player = new Vimeo.Player(iframe);
+                        
+                            // Restart the video when it ends
+                            player.on('ended', function() {
+                                player.setCurrentTime(0).then(function() {
+                                    player.play(); // Restart from the beginning
+                                });
+                            });
+                        </script>
+                    </div>
+                    <p class="caption caption-video-large">For additional credits <a class="intra-text-btn" href="https://vimeo.com/987734638?share=copy" target="_blank">see&nbsp;Vimeo.</a></p>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+<!-- FOOTER SECTION -->
+<footer>
+    <div class="container">
+        <p class="small-text">Victor D'Anzi, VICKYTOR, CG generalist and 3D animator based in New York.</p>
+        <div class="row">
+            <div class="col-xs-12 col-lg-6">
+                <p>&copy; 2025 Victor D'Anzi</p>
+            </div>
+            <div class="col-xs-12 col-lg-6">
+                <p>
+                    <a href="mailto:vickytor.animation@gmail.com">vickytor.animation@gmail.com</a> | <a href="#">Back&nbsp;to&nbsp;top</a>
+                </p>
+            </div>
+        </div>
+</footer>
+
+    <script
+    src="script.js"></script>
+</body>
