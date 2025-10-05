@@ -21,8 +21,9 @@ html {
 }
 
 h1, h2, h3, h4 {
-    font-family: "Abril Fatface", serif;
-    font-weight: 400;
+    /*font-family: "Abril Fatface", serif;*/
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -53,7 +54,7 @@ i {
   width: calc((100% / 12) * 3);
   position: fixed;
   /*right: 0;*/
-  /*z-index: 996;*/
+  /* z-index: 996; */
 }
 
 header {
@@ -140,9 +141,9 @@ nav {
   text-decoration: none;
   font-size: 1.5rem;
   text-align: center;
-  font-family: 'Abril Fatface', serif;
+  /*font-family: 'Abril Fatface', serif;*/
+  font-family: "Poppins", sans-serif;
   padding: 10px 30px;
-  border-radius: 30px;
 }
 
 .nav-links a:hover {
@@ -183,25 +184,41 @@ nav {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2); /* CHANGE FILTER OF THE VIDEO */
-  z-index: 0; /* Put the filter on top of vidéo */
+  z-index: 0; /* Put the filter on top of the video */
 }
 
 .header-video h1 {
   position: absolute;
-  font-family: 'Abril Fatface', serif;
+  font-family: "Poppins", sans-serif;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 5rem;
   text-align: center;
-  z-index: 1; /* put the text on top of vidéo */
+  z-index: 1; /* Put the text on top of the video */
   text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
   line-height: 4rem;
 }
 
+.video-placeholder {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Keeps it under other elements */
+}
+
+.video-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Make sure the iframe replaces the placeholder correctly */
 .header-video iframe {
-  display: block; 
+  display: block;
   margin: 0;
   padding: 0;
   position: absolute;
@@ -211,8 +228,12 @@ nav {
   height: 100%;
   transform: scale(1.2);
   border: none;
-  z-index: -1; /* put the video under everything else */
-  object-fit: cover; /* video covered all the container */
+  z-index: -1; /* Keep the video in the background */
+  object-fit: cover; /* Ensure video covers the container */
+}
+
+.header-title .btn {
+  margin-top: 30px;
 }
 
 /* Sound button */
@@ -233,73 +254,6 @@ nav {
   color: black;
 }
 
-
-/* Carousel Section */
-
-.carousel-part {
-  /*height: 100vh;*/ /* This is the height Ju had put */
-  width: 100%;
-  height: auto; /* This is the height I put, not Ju */
-  position: relative;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  padding-top: 100px;
-  background-color: #081b43;
-}
-.carousel-part h2 {
-  color: white;
-  text-align: center;
-  font-size: 3rem;
-  font-family: 'Abril Fatface', serif;
-  margin-bottom: 45px;
-}
-
-.carousel {
-  height: auto;
-  width: 70%;
-  max-width:992px;
-  min-width: 300px;
-  position: relative;
-  margin:auto;
-  margin-bottom: 80px;
-  z-index: 997;
-}
-
-.carousel:after {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: transparent;
-  border: 2px solid white;
-  width: 100%; /* Adjust width to account for offset */
-  height: 100%; /* Adjust height to account for offset */
-  z-index: -1; /* Set to a lower value than the carousel's content */
-  pointer-events: none; /* Prevent interaction with the pseudo-element */
-}
-.carousel-inner img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.carousel-inner h3 {
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-}
-
-.carousel-inner .btn {
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
-}
-
-.carousel-control-next, .carousel-control-prev {
-  z-index: 997;
-}
-.text-center {
-  text-align: center;
-}
-
-
 /* Button animation */
 .btn {
   background-color: rgba(0, 0, 0, 0);
@@ -319,6 +273,14 @@ nav {
   outline: none;
   z-index: 997;
 }
+
+.btn-container {
+  font-weight: 400;
+  margin: 0 10px;
+  width: 600px;
+  max-width: 90%;
+}
+
 
 .btn:before {
   content: '';
@@ -359,8 +321,8 @@ nav {
   left: 0;
   overflow: hidden;
   padding-top: 50px;
-  padding-bottom: 150px;
-  background-color: #020711;
+  padding-bottom: 100px;
+  background-color: #0b101b;
 }
 
 .about-section .row { 
@@ -371,7 +333,8 @@ nav {
   color: white;
   text-align: center;
   font-size: 3rem;
-  font-family: 'Abril Fatface', serif;
+  font-family: "Poppins", sans-serif;
+  /*font-family: 'Abril Fatface', serif;*/
   margin-bottom: 45px;
 }
 
@@ -422,35 +385,6 @@ nav {
 }
 
 
-
-/* Gallery Section */
-
-
-.projectGallery {
-  background-color: #020711;
-  padding: 100px 0;
-}
-.projectGallery h2 {
-  margin-bottom: 45px;
-}
-.card {
-  background-color: #081b43;
-  margin-bottom : 20px;
-}
-
-.card-title {
-  height: 50px;
-}
-
-.card-title-long {
-  font-size: 23px;
-}
-
-.card-text {
-  height: 80px;
-}
-
-
 /* Footer Section */
 
 footer {
@@ -466,6 +400,204 @@ footer a {
 }
 footer a:hover {
   color: white;
+}
+
+.small-text {
+  font-size: 12px;
+}
+
+
+/* MASONRY FOR OTHER PROJECTS */
+
+.masonry-container {
+  background-color: #0b101b;
+}
+
+.grid-masonry {
+  padding-top: 5rem;
+  padding-bottom: 5rem ;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  max-width: 1200px; /* originally 900 */
+  gap: 10px; /* change the value for changing the space between each block */
+}
+
+
+.grid-masonry .grid-item {
+  position: relative;
+  width: calc(400px - 10px); /* replace the 10px by the value of the gap */
+  height: calc(400px - 10px); /* replace the 10px by the value of the gap */
+  overflow: hidden;
+}
+.grid-masonry .grid-item img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.grid-masonry .grid-item:hover img {
+	transform: scale(1.1);
+	filter: blur(2px);
+}
+
+
+
+.grid-masonry .grid-item-2 { /* add this class next to the grid-item class in the html if you want the image in 2 blocks */
+  width: calc(800px - 10px); /* replace the 10px by the value of the gap */
+}
+.grid-masonry .grid-item-2 img { 
+  width: calc(800px - 10px); /* replace the 10px by the value of the gap */
+}
+@media (max-width: 1200px){
+	.grid-masonry .grid-item-2 { /* add this class next to the grid-item class in the html if you want the image in 2 blocks */
+	  width: calc(400px - 10px); /* replace the 10px by the value of the gap */
+	}
+	.grid-masonry .grid-item-2 img { 
+	  width: calc(400px - 10px); /* replace the 10px by the value of the gap */
+	}
+}
+
+
+
+.grid-masonry .grid-item-3 { /* add this class next to the grid-item class in the html if you want the image in 3 blocks */
+  width: calc(1200px - 10px); /* replace the 10px by the value of the gap */
+}
+.grid-masonry .grid-item-3 img { 
+  width: calc(1200px - 10px); /* replace the 10px by the value of the gap */
+}
+@media (max-width: 1200px){
+	.grid-masonry .grid-item-3 { /* add this class next to the grid-item class in the html if you want the image in 3 blocks */
+	  width: calc(400px - 10px); /* replace the 10px by the value of the gap */
+	}
+	.grid-masonry .grid-item-3 img { 
+	  width: calc(400px - 10px); /* replace the 10px by the value of the gap */
+	}
+}
+
+
+
+
+/* Background black on the hover on the image */
+.grid-masonry .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  color: white;
+  transition: opacity 0.3s ease;
+  padding: 15px;
+}
+.grid-masonry .overlay .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Centers horizontally */
+  text-align: center;
+  height: 100%; /* Make sure it takes up the full height of the parent */
+}
+
+.grid-masonry .grid-item:hover .overlay {
+  opacity: 1;
+}
+
+
+
+
+/* Full image clickable */
+.grid-masonry .grid-item a {
+	position: absolute; 
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+  text-decoration: none;
+}
+
+
+
+
+/* Text CSS after the hover on the image */
+.grid-masonry .title {
+  /*margin-top: 3.4rem;*/
+  font-size: 1.5rem;
+  margin-bottom: 7px;
+}
+.grid-masonry .title a {
+	color: white;
+	text-decoration: none;
+}
+.grid-masonry p.text {
+	margin-top: 10px;
+	max-width: 400px;
+}
+
+
+
+/* See more button on desktop */
+.grid-masonry p.btn {
+	margin-top: 20px;
+}
+.grid-masonry p.btn a {
+	position:relative;
+	/*background-color: white;*/
+	color: white;
+	text-decoration: none;
+	padding: 10px 20px;
+	transition-duration: 0.2s;
+}
+.grid-masonry p.btn a:hover {
+	/*background-color: black;*/
+	color: black;
+	transition-duration: 0.3s;
+}
+
+
+
+
+.grid-masonry .overlay p img {/* delete the image arrow-left button on desktop */
+	display:none;
+}
+
+
+
+/* MOBILE SETTINGS */
+@media (max-width: 1200px) {
+  .grid-masonry .overlay{ /* replace the background black by a gradient */
+	opacity:1; 
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%);
+	display: flex;
+	flex-direction: column;
+	justify-content:end;
+  }
+  .grid-masonry .overlay .description { /* put the title and the arrow image at the bottom of the image */
+	width: 100%;
+	height: auto;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	text-align: left;
+  }
+  .grid-masonry .overlay p img { /* add the image arrow-left button on mobile */
+	width: 30px;
+	height: auto;
+	display: block;
+	margin-top: 20px;
+  }
+  .grid-masonry .overlay p.text, .overlay p.btn { /* delete the see mor button on mobile */
+	  display: none;
+  }
+  
+  
+  .grid-masonry .grid-item:hover img { /* delete the blur and zoom on mobile */
+	transform: scale(1);
+	filter: blur(0px);
+  }
+
 }
 
 
@@ -490,7 +622,7 @@ footer a:hover {
 @media (max-width:792px) {
 
   .header-video {
-    background-image: url('assets/title-screen-mobile-victor-danzi-3d-animation.jpg');
+    background-image: url('assets/ellis-reflection-victor-danzi-animated-short-film-01.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

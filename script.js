@@ -14,6 +14,25 @@ function onYouTubeIframeAPIReady() {
     });
 }
 
+
+window.addEventListener("load", function () {
+    const placeholder = document.getElementById("vimeo-placeholder");
+    
+    // Replace placeholder with the Vimeo iframe as soon as the page loads
+    placeholder.innerHTML = `
+        <iframe 
+            src="https://player.vimeo.com/video/1070512825?autoplay=1&loop=1&muted=1&background=1" 
+            width="100%" 
+            height="100%" 
+            frameborder="0" 
+            allow="autoplay; fullscreen; picture-in-picture" 
+            allowfullscreen 
+            title="Victor D'ANZI opening reel">
+        </iframe>`;
+});
+
+
+
 // Function is called when the player is ready
 function onPlayerReady(event) {
     // Set the playback quality to HD1080 or your preferred quality
