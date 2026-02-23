@@ -1,0 +1,109 @@
+.body-project {
+    background-color: #1d1d25;
+    z-index: 2;
+    position: relative; /* Add this to ensure z-index works */
+}
+
+.header-image {
+    background-image: url('projectAssets/did-i-cross-your-mind-vickytor-music-header.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    padding-bottom: 80px;
+    position: relative; /* Add this to ensure z-index works */
+    z-index: 1; /* Make sure the header image is behind other elements */
+}
+
+.album-cover {
+    max-width: 450px;
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.album-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.container-project {
+    padding-bottom: 0;
+}
+
+.body-container {
+    padding-top: 0;
+}
+
+.dropdown-title {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 300px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+    margin-bottom: 2.5px;
+}
+
+.dropdown-title h2 {
+    margin: 0;
+}
+
+.dropdown-title:hover {
+    background-color: white;
+    color: #081b43;
+    transition: 0.3s;
+}
+
+.dropdown-arrow {
+    content: " ";
+    opacity:1;
+    width: 15px;
+    height: 15px;
+    top: 15px;
+    left: 15px;
+    border-bottom: 3px solid white;
+    border-left: 3px solid white;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+.dropdown-title:hover .dropdown-arrow {
+    border-color: #081b43;
+}
+
+.dropdown-arrow.rotate {
+    transform: rotate(-225deg); /* Rotate an additional -45deg */
+}
+
+.dropdown-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+/* Show transition with a longer duration */
+.dropdown-content.show {
+    max-height: 700px; /* Adjust this value as needed */
+    opacity: 1;
+    transition-duration: 0.5s; /* Longer duration for showing */
+}
+
+.video-group-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+
+    
